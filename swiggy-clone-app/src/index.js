@@ -12,10 +12,13 @@ import Body from './utils/Body';
 import { RestaurantMenu } from './utils/RestaurantMenu';
 import Memo from './utils/Memo.jsx';
 
-import {RouterProvider, createBrowserRouter} from 'react-router-dom'; 
+// import {RouterProvider, createBrowserRouter} from 'react-router-dom'; 
+import {RouterProvider, createHashRouter} from 'react-router-dom'; 
+
 // import Login from './utils/Login.jsx';
 
-const appRouter = createBrowserRouter([
+// const appRouter = createBrowserRouter([
+const appRouter = createHashRouter([
   {
     path : '/',
     element : <App/>,
