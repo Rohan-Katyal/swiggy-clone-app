@@ -25,7 +25,7 @@ const RestaurantItem = ({itemInfo})=>{
     function addItem(iteminfo){
         console.log('Item Added!!');
         // console.log(iteminfo);
-        const API_URL = process.env.REACT_APP_API_URL;
+        const API_URL = 'https://swiggy-clone-app-production.up.railway.app';
 
         fetch(`${API_URL}/api/cart/updateItem`,{
             method:"POST",
