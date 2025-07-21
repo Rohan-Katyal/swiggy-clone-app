@@ -14,7 +14,7 @@ app.use(cors());
 //     allowedHeaders : ['Content-Type', 'Authorization']
 // }));
 
-mongoose.connect(process.env.MongoDB_URI);
+mongoose.connect(process.env.MONGO_URI);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
