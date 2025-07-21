@@ -13,7 +13,7 @@ app.use(cors());
 //     methods : ['GET', 'POST', 'PUT','PATCH', 'DELETE'],
 //     allowedHeaders : ['Content-Type', 'Authorization']
 // }));
-
+require('dotenv').config();
 mongoose.connect(process.env.MONGO_URI);
 
 const PORT = process.env.PORT || 5000;
