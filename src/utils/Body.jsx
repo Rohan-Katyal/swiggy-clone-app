@@ -18,6 +18,8 @@ const Body = () => {
 
   const {user, visible, setIsVisible} = useContext(UserContext);
 
+  const API_URL = import.meta.env.VITE_API_URL;
+
   // Ques: Why are we using two use States ?
   /*
     Ans: Here we are taking two useState as one of them(restaurants) is acting as a primary
@@ -62,7 +64,8 @@ const Body = () => {
     let data = await fetch(
       // "https://www.swiggy.com/dapi/restaurants/list/v5?lat=27.899120276651594&lng=78.06671295315027&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
       // "https://rohan-katyal.github.io/swiggy-clone-ap0p/#/api/getallrestaurants"
-      'http://localhost:5000/api/getallrestaurants'
+      // 'http://localhost:5000/api/getallrestaurants'
+      'API_URL/getallrestaurants'
     );
 
 
