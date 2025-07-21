@@ -19,11 +19,10 @@ mongoose.connect(process.env.MONGO_URI,{
     useUnifiedTopology: true,
     ssl: true,
     tlsAllowInvalidCertificates: true
-}
+})
 .then(()=>console.log('Databse connected Successfully !!')
-.catch((err)=>console.error('Databse connection Failed !!')))
+.catch((err)=>console.error('Databse connection Failed !!')));
 
-);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
