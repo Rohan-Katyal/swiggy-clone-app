@@ -14,7 +14,16 @@ app.use(cors());
 //     allowedHeaders : ['Content-Type', 'Authorization']
 // }));
 require('dotenv').config();
-mongoose.connect(process.env.MONGO_URI);
+mongoose.connect(process.env.MONGO_URI,{
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    ssl: true,
+    tlsAllowInvalidCertificates: true
+}
+.then(()=>console.log('Databse connected Successfully !!')
+.catch((err)=>console.error('Databse connection Failed !!')))
+
+);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
