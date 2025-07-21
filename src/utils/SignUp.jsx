@@ -46,6 +46,7 @@ const SignUp = ({setVisible})=>{
     };
 
     function handleSubmit(){
+        e.preventDefault();
         loginVisible ? login() : signup();
     };
 
@@ -115,6 +116,7 @@ const SignUp = ({setVisible})=>{
         })
         setVisible(false);
         setTimeout(()=>{
+            setVisible(false);
             window.location.reload();
         },1000)
 
