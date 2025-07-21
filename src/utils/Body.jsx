@@ -18,7 +18,7 @@ const Body = () => {
 
   const {user, visible, setIsVisible} = useContext(UserContext);
 
-  const API_URL = import.meta.env.VITE_API_URL;
+  const API_URL = import.meta.env.API_URL;
 
   // Ques: Why are we using two use States ?
   /*
@@ -26,7 +26,7 @@ const Body = () => {
     list, containing all the restaurant cards data from the API call, and the other (restaurantList)
     is acting as a secondary list, which we are utilizing for searching and displaying required 
     restaurant cards.
-
+s
     we initialy display the secondary variable, and when we search for the restaurants then change
     its value to display it, but if we do this the new search will be executed according to the 
     current list which is displayed, here comes the primary list, which is required in order to
