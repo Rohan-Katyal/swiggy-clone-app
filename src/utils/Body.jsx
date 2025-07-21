@@ -18,7 +18,7 @@ const Body = () => {
 
   const {user, visible, setIsVisible} = useContext(UserContext);
 
-  const API_URL = process.env.REACT_APP_API_URL;
+  const API_URL = 'https://swiggy-clone-app-production.up.railway.app'
 
   // Ques: Why are we using two use States ?
   /*
@@ -65,10 +65,9 @@ s
       // "https://www.swiggy.com/dapi/restaurants/list/v5?lat=27.899120276651594&lng=78.06671295315027&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
       // "https://rohan-katyal.github.io/swiggy-clone-ap0p/#/api/getallrestaurants"
       // 'http://localhost:5000/api/getallrestaurants'
-      `https://swiggy-clone-app-production.up.railway.app/api/getallrestaurants`
+      `${API_URL}/api/getallrestaurants`
     );
 
-    console.log(API_URL);
 
     // here data is a promise and not a json response
 
