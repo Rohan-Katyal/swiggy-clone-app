@@ -46,7 +46,7 @@ const SignUp = ({setVisible})=>{
     };
 
     function handleSubmit(){
-        e.preventDefault();
+        // e.preventDefault();
         loginVisible ? login() : signup();
     };
 
