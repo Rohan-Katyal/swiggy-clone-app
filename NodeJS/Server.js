@@ -14,11 +14,17 @@ app.use(cors());
 //     allowedHeaders : ['Content-Type', 'Authorization']
 // }));
 
-mongoose.connect("mongodb+srv://Rohan:Rohan@cluster0.tpc5v6g.mongodb.net/");
+mongoose.connect(process.env.MongoDB_URI);
 
-app.listen(5000, '127.0.0.1',()=>{
-    console.log('Server running on port 5000')
-})
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
+
+// app.listen(5000, '127.0.0.1',()=>{
+//     console.log('Server running on port 5000')
+// })
 
 // Creating Middleware function
 // function loggedInUserRequest(req, res, next){
