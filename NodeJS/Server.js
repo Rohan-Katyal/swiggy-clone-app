@@ -51,6 +51,11 @@ app.listen(PORT, () => {
 // request made => Middleware (loggedInUserRequest) => responce created
 // app.use(loggedInUserRequest);
 
+app.get("/", (req, res) => {
+  res.send("✅ Backend is live on Railway!");
+});
+
+
 app.get("/users", (req,res)=>{
     res.send('Call Initiated!!');
 });
