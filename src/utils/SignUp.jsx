@@ -78,7 +78,7 @@ const SignUp = ({setVisible})=>{
 
     function login(){
         console.log('Login !!');
-        const API_URL = process.env.REACT_APP_API_URL;
+        const API_URL = 'https://swiggy-clone-app-production.up.railway.app';
 
         fetch(`${API_URL}/api/userLogin`,{
             method:"POST",
@@ -126,7 +126,7 @@ const SignUp = ({setVisible})=>{
     function signup(){
 
         console.log('Sign Up!!');
-        const API_URL = process.env.REACT_APP_API_URL;
+        const API_URL = 'https://swiggy-clone-app-production.up.railway.app';
 
         fetch(`${API_URL}/api/userRegister`,{
             method:"POST",
