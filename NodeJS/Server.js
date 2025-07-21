@@ -20,8 +20,8 @@ mongoose.connect(process.env.MONGO_URI,{
     ssl: true,
     tlsAllowInvalidCertificates: true
 })
-.then(()=>console.log('Databse connected Successfully !!')
-.catch((err)=>console.error('Databse connection Failed !!')));
+.then(()=>console.log('Databse connected Successfully !!'))
+.catch((err)=>console.error('Databse connection Failed !!'));
 
 
 const PORT = process.env.PORT || 5000;
@@ -51,7 +51,7 @@ app.listen(PORT, () => {
 // request made => Middleware (loggedInUserRequest) => responce created
 // app.use(loggedInUserRequest);
 
-app.get("localhost:5000/users", (req,res)=>{
+app.get("/users", (req,res)=>{
     res.send('Call Initiated!!');
 });
 
@@ -64,7 +64,7 @@ function authUser(req,res, next){
 // Using Root Level Middleware
 // Middleware sequence 
 // First Application Level Middleware will execute then=> Root Level Middleware will execute
-app.post("localhost:5000/authUser",authUser, (req,res)=>{
+app.post("/authUser",authUser, (req,res)=>{
     const {name, email} = req.body;
 
     res.status(200).json({message:`Name : ${name},Email : ${email}`})
