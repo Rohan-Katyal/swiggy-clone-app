@@ -65,7 +65,7 @@ s
       // "https://www.swiggy.com/dapi/restaurants/list/v5?lat=27.899120276651594&lng=78.06671295315027&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
       // "https://rohan-katyal.github.io/swiggy-clone-ap0p/#/api/getallrestaurants"
       // 'http://localhost:5000/api/getallrestaurants'
-      `${API_URL}/getallrestaurants`
+      `${API_URL}/api/getallrestaurants`
     );
 
     console.log(API_URL);
