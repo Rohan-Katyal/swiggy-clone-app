@@ -78,8 +78,9 @@ const SignUp = ({setVisible})=>{
 
     function login(){
         console.log('Login !!');
+        const API_URL = process.env.REACT_APP_API_URL;
 
-        fetch('http://localhost:5000/api/userLogin',{
+        fetch(`${API_URL}/api/userLogin`,{
             method:"POST",
             headers : {
                 "Content-Type" : "application/json"
@@ -125,8 +126,9 @@ const SignUp = ({setVisible})=>{
     function signup(){
 
         console.log('Sign Up!!');
+        const API_URL = process.env.REACT_APP_API_URL;
 
-        fetch('http://localhost:5000/api/userRegister',{
+        fetch(`${API_URL}/api/userRegister`,{
             method:"POST",
             headers : {
                 "Content-Type":"application/json",

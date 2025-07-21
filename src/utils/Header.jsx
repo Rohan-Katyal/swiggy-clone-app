@@ -107,8 +107,9 @@ const Header = ()=>{
     }
 
     function CartOnline(){
-        
-        let data = fetch('http://localhost:5000/api/cart/getCartItem',{
+        const API_URL = 'https://swiggy-clone-app-production.up.railway.app';
+
+        const data = fetch(`${API_URL}/api/cart/getCartItem`,{
             method : "POST",
             headers : {
                 "Content-Type":"application/json",

@@ -25,8 +25,9 @@ const RestaurantItem = ({itemInfo})=>{
     function addItem(iteminfo){
         console.log('Item Added!!');
         // console.log(iteminfo);
+        const API_URL = process.env.REACT_APP_API_URL;
 
-        fetch('http://localhost:5000/api/cart/updateItem',{
+        fetch(`${API_URL}/api/cart/updateItem`,{
             method:"POST",
             headers : {
                 "Content-Type" : "application/json"

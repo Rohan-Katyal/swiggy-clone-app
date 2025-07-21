@@ -93,7 +93,8 @@ export const Cart = () =>{
     // console.log(typeof(cartitems));
 
     function clearCart(){
-        fetch('http://localhost:5000/api/cart/deleteItems',{
+        const API_URL = 'https://swiggy-clone-app-production.up.railway.app';
+        fetch(`${API_URL}/api/cart/deleteItems`,{
             method : 'POST',
             mode : "cors",
             headers : {
